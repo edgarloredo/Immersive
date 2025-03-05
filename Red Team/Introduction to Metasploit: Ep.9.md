@@ -11,4 +11,4 @@ After uploading the image, use the Markdown image syntax to embed it in your fil
 ```markdown
 ## Screenshot of Nmap Results
 
-![Nmap Scan Results](../Uploads/SYSTEM.png)
+![Nmap Scan Results](Uploads/SYSTEM.png)
