@@ -23,3 +23,11 @@ Following the instructions "Discover valid credentials to access the Manager are
 We found an interesting module for Tomcat Application Manager Login Utility. "This module simply attempts to login to a Tomcat Application Manager instance using a specific user/pass.", once we configure all the fields, we found a username and password.
 
 ![Image Description](Uploads/userpass.png)
+
+Now we have credentials, we need to search for a proper module to exploit it and obtain access to the server, I used similar search but changing the "type" to "exploit" and I found an interesting one to Upload Code Execution, I set all the fields and execute the module. After some seconds we got initial access and we can visualize the first flag.
+
+![Image Description](Uploads/exploit.png)
+
+![Image Description](Uploads/payload.png)
+
+![Image Description](Uploads/flag.png)
