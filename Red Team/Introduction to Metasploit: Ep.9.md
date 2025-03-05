@@ -8,7 +8,4 @@ To add images to your walkthrough, you'll need to upload the image to your repos
 
 After uploading the image, use the Markdown image syntax to embed it in your file. For example:
 
-```markdown
-## Screenshot of Nmap Results
-
-![Nmap Scan Results](Uploads/SYSTEM.png)
+![Image Description](Uploads/SYSTEM.png)
