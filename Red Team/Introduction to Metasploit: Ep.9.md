@@ -31,3 +31,16 @@ Now we have credentials, we need to search for a proper module to exploit it and
 ![Image Description](Uploads/payload.png)
 
 ![Image Description](Uploads/flag.png)
+
+I put the meterpreter session in the background on session 1, I tried to use local_exploit_suggester module however the payload I found did not work to escalate my privilege so I decided to enumerate the system manually.
+
+![Image Description](Uploads/background.png)
+
+![Image Description](suggester.png)
+
+User is not part of the "Administrators" group however there is a really interesting privilege assigned to the user, **SeImpersonatePrivilege** is a Windows privilege that grants a user or process the ability to impersonate the security context of another user or account, we can abuse of this privilege to impersonate SYSTEM user.
+![Link Text](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeImpersonatePrivilege.md#SeImpersonatePrivilege)
+
+![Image Description](enum.png)
+
+![Image Description](impersonate.png)
