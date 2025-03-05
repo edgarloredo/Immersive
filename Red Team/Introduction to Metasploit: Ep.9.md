@@ -39,7 +39,7 @@ I put the meterpreter session in the background on session 1, I tried to use loc
 ![Image Description](Uploads/suggester.png)
 
 User is not part of the "Administrators" group however there is a really interesting privilege assigned to the user, **SeImpersonatePrivilege** is a Windows privilege that grants a user or process the ability to impersonate the security context of another user or account, we can abuse of this privilege to impersonate SYSTEM user.
-![Link Text](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/SeImpersonatePrivilege.md#SeImpersonatePrivilege)
+![Link Text](https://www.plesk.com/kb/support/microsoft-windows-seimpersonateprivilege-local-privilege-escalation/)
 
 ![Image Description](Uploads/enum.png)
 
