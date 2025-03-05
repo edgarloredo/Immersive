@@ -16,11 +16,11 @@ sudo nmap -sC -sV  -p3389,8009,9090 -Pn <IP>
 
 ![Image Description](Uploads/targeted.png)
 
-Following the instructions "Discover valid credentials to access the Manager area of the Apache Tomcat server", with this information we can use Metasploit to search for anyting related to the versions we found, I search for Apache Tomcat Manager and only for Auxiliary module.
+Following the instructions "*Discover valid credentials to access the Manager area of the Apache Tomcat server*", with this information we can use Metasploit to search for anyting related to the versions we found, I search for Apache Tomcat Manager and only for Auxiliary module.
 
 ![Image Description](Uploads/search.png)
 
-We found an interesting module for Tomcat Application Manager Login Utility. "This module simply attempts to login to a Tomcat Application Manager instance using a specific user/pass.", once we configure all the fields, we found a username and password.
+We found an interesting module for Tomcat Application Manager Login Utility. "*This module simply attempts to login to a Tomcat Application Manager instance using a specific user/pass.*", once we configure all the fields, we found a username and password.
 
 ![Image Description](Uploads/userpass.png)
 
@@ -57,3 +57,11 @@ I created a folder to upload **shell.exe** file, once uploaded, I opened a new M
 ![Image Description](Uploads/upload_shell.png)
 
 ![Image Description](Uploads/meterpreter_shell.png)
+
+Finally with a more powershell reverse shell, I can list available commands and use **getsystem**, "*getsystem command is used to attempt privilege escalation by elevating the current user session to the SYSTEM account or Administrator level, depending on what is available and possible on the target system.*"
+
+Finally we can use **load** command to use **kiwi**.
+
+![Image Description](Uploads/SYSTEM.png)
+
+![Image Description](Uploads/kiwi.png)
