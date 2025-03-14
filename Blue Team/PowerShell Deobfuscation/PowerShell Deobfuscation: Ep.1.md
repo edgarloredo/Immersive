@@ -6,7 +6,7 @@ You are going to start with a dropper.ps1 file and initially it will be unreadab
 
 Here you have two options, you can execute the PowerShell script and remove the execution part or you can upload the file in CyberChef and perform different Operations. I am going to show you both scenarios.
 
-1. ***Manual PS1 Execution***
+***Manual PS1 Execution***
 In my opinion the easiest way to deobfuscate as you just need to do minimum changes however you need to understand which parts of the code are required and which ones you can remove without affecting the logic.
 
 As mentioned in the beginning, you need to find the execution instruction, could be very obvious or it could be obfuscate. In this case you can see at the beginning of the code &((VARIable '*mDR*').NAMe[3,11,2]-join'') and this is the execution, how will you know? Because you can run it in powershell.
@@ -22,7 +22,7 @@ We can execute dropper.ps1 and it will only do the deobfuscation and not the exe
 ![Image Description](/Blue%20Team/Uploads/ps1manual.png)
 
 
-2. ***CyberChef***
+***CyberChef***
 When you upload the file or copy/paste it, you will see the content and you need to analyze the script to determine the best Operations, in this case we can see **FrOmBASE64sTRiNG** which indicates the string was encoded in base64, we are going to add *From Base64* in the Recipe but we only see random characters, if we continue reading the code, the content was compressed using **dEFLAtEStreAm** so, we need to perform the opposite and we will use *Raw Inflate* but for some reason it did not work, why? Because we only need to add the base64 string so we need to remove everything and then we will see the original raw data.
 
 ![Image Description](/Blue%20Team/Uploads/original.png)
