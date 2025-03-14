@@ -2,4 +2,4 @@ This is the first laboratory and it is the easiest one however I will give you s
 
 You are going to start with a dropper.ps1 file and initially it will be unreadable but every time an script or code is "obfuscated" it must has an execution instruction, for example, Invoke-Expression, iex, etc., we have different ways to deobfuscate, manually with CyberChef or a custom script or executing the dropper.ps1 removing the execution instructions.
 
-![Image Description](Uploads/PowerShell%20Deobfuscation/Ep.1%20dropper.png)
+![Image Description](/PowerShell%20Deobfuscation/Uploads/Ep.1%20dropper.png)
