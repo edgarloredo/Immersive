@@ -6,6 +6,7 @@ You are going to start with a dropper.ps1 file and initially it will be unreadab
 
 Here you have two options, you can execute the PowerShell script and remove the execution part or you can upload the file in CyberChef and perform different Operations. I am going to show you both scenarios.
 
+
 ***Manual PS1 Execution***
 
 In my opinion the easiest way to deobfuscate as you just need to do minimum changes however you need to understand which parts of the code are required and which ones you can remove without affecting the logic.
