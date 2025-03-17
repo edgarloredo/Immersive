@@ -64,10 +64,10 @@ This is followed by another set of IP addresses and port numbers. Standard notat
 
 The remainder of the rule falls within a set of parentheses. These options set the metadata element of the rule. They are known as key:value pairs and are terminated with a semicolon. There are several options here. The standard fields are as follows:
 
-- msg is the message displayed in the log/alert
-- sid is a unique numerical identifier that identifies the rule and has several reserved ranges
-- rev annotates the revision of a rule
-- classtype is used to categorize and group common rules and has many defaults
+- ***msg*** is the message displayed in the log/alert
+- ***sid*** is a unique numerical identifier that identifies the rule and has several reserved ranges
+- ***rev*** annotates the revision of a rule
+- ***classtype*** is used to categorize and group common rules and has many defaults
 
 
 **Detection options**
