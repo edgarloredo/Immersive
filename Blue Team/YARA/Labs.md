@@ -5,16 +5,25 @@ String sets
 When creating the condition for the Yara rule there is some standard syntax we can use to match groups.
 
 rule ExampleRule
+
 {
+
 strings:
+
 $a = "bar"
+
 $a2 = "foo"
+
 $a3 = "cow"
+
 $b = "hello"
+
 $b2 = "enterprise"
+
 $c = "world"
 
 condition:
+
 1 of them // equivalent to 1 of ($*)
 
 }
